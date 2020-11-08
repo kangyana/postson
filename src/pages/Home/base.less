@@ -1,3 +1,52 @@
 .home {
-  background: red;
+  .history {
+    overflow-y: scroll;
+    width: 300px;
+    .history-item {
+      padding: 12px;
+      .request-type {
+        margin-right: 10px;
+      }
+    }
+  }
+  .request {
+    .request-form {
+      padding: 12px;
+      height: 36px;
+      .request-search {
+        overflow: hidden;
+        margin-right: 12px;
+        border-radius: 4px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        .request-select {
+          padding: 0 10px;
+          width: 100px;
+          background: rgba(0, 0, 0, 0.1);
+          border: 0;
+          border-right: 1px solid rgba(0, 0, 0, 0.2);
+          outline: none;
+          &:focus {
+            background: #fff;
+          }
+        }
+        .request-input {
+          overflow-x: scroll;
+          padding: 0 10px;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.1);
+          border: 0;
+          outline: none;
+          &:focus {
+            background: #fff;
+          }
+        }
+      }
+      .request-button {
+        width: 80px;
+        background: #1890ff;
+        border-radius: 4px;
+        color: #fff;
+      }
+    }
+  }
 }
