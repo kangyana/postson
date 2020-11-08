@@ -1,8 +1,8 @@
-import { createStore } from 'vuex';
+import { createStore, Store } from 'vuex';
+import * as modules from './models'
 
-export default createStore({
-  state: {},
-  mutations: {},
-  actions: {},
-  modules: {},
+const store: Store<any> = createStore({
+  modules
 });
+
+export default store

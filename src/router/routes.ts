@@ -4,12 +4,12 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/',
     name: 'home',
-    component: () => import('@/views/Home/index.vue'),
+    component: () => import('@/pages/Home/index.vue'),
   },
   { 
     path: '/mine',
     name: 'mine',
-    component: () => import('@/views/Mine/index.vue'),
+    component: () => import('@/pages/Mine/index.vue'),
   },
   {
     path: '/:pathMatch(.*)*',
