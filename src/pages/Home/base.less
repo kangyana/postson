@@ -10,8 +10,8 @@
     }
   }
   .request {
+    padding: 12px;
     .request-form {
-      padding: 12px;
       height: 36px;
       .request-search {
         overflow: hidden;
@@ -25,6 +25,7 @@
           border: 0;
           border-right: 1px solid rgba(0, 0, 0, 0.2);
           outline: none;
+          color: rgb(96, 98, 102);
           &:focus {
             background: #fff;
           }
@@ -36,6 +37,7 @@
           background: rgba(0, 0, 0, 0.1);
           border: 0;
           outline: none;
+          color: rgb(96, 98, 102);
           &:focus {
             background: #fff;
           }
@@ -46,6 +48,21 @@
         background: #1890ff;
         border-radius: 4px;
         color: #fff;
+      }
+    }
+    .request-result {
+      margin-top: 20px;
+      .result-title {
+        margin-bottom: 20px;
+      }
+      .result-panel {
+        overflow: hidden;
+        background: #f6f6f6;
+        border-radius: 6px;
+        pre {
+          width: 100%;
+          margin: 0;
+        }
       }
     }
   }

@@ -1,48 +1,65 @@
 <template>
   <div class="home fixed-view flex">
     <div class="history">
-      <div class="history-item flex" v-for="item in 20" :key="item">
+      <div class="history-item flex gesture--click" v-for="item in 20" :key="item">
         <div class="request-type flex just-center align-center">GET</div>
         <div class="flex-1">https://api.apiopen.top/getJoke?page=1&count=2&type=video</div>
       </div>
     </div>
-    <div class="request flex-1">
+    <div class="request flex-1 flex flex-col">
       <div class="request-form flex">
         <div class="request-search flex-1 flex">
           <select class="request-select fw700">
             <option value="GET">GET</option>
             <option value="POST">POST</option>
           </select>
-          <input class="request-input flex-1" />
+          <input class="request-input flex-1" v-model="url" />
         </div>
-        <div class="request-button flex just-center align-center gesture--click disable-select">请 求</div>
+        <div
+          class="request-button flex just-center align-center gesture--click disable-select"
+          @click="sendRequest"
+        >
+          请 求
+        </div>
+      </div>
+      <div class="request-result flex-1 flex flex-col">
+        <div class="result-title">Response</div>
+        <div class="result-panel flex-1 flex">
+          <pre class="line-numbers">
+            <code class="language-json">{{ result }}</code>
+          </pre>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { onMounted, ref } from 'vue';
+import { ref } from 'vue';
 import './base.less';
 
 export default {
   name: 'home',
   setup() {
-    const jokes = ref([]);
+    const url = ref('https://api.apiopen.top/getJoke?page=1&count=2&type=video');
+    const result = ref('');
 
-    const getJokes = () => {
-      // fetch('https://api.apiopen.top/getJoke?page=1&count=2&type=video')
-      //   .then(res => res.json())
-      //   .then(res => {
-      //     jokes.value = res.result
-      //   })
+    const sendRequest = () => {
+      if (!url.value) {
+        alert('请求URL为空！');
+        return;
+      }
+      fetch(url.value)
+        .then((res) => res.json())
+        .then((res) => {
+          result.value = JSON.stringify(res);
+        });
     };
 
-    onMounted(getJokes);
-
     return {
-      jokes,
-      getJokes,
+      url,
+      result,
+      sendRequest,
     };
   },
 };
