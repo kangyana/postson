@@ -9,9 +9,8 @@
     <div class="request flex-1 flex flex-col">
       <div class="request-form flex">
         <div class="request-search flex-1 flex">
-          <select class="request-select fw700">
-            <option value="GET">GET</option>
-            <option value="POST">POST</option>
+          <select class="request-select fw700" v-model="option">
+            <option v-for="item in options" :key="item" :value="item">{{ item }}</option>
           </select>
           <input class="request-input flex-1" v-model="url" />
         </div>
@@ -43,6 +42,8 @@ export default {
   setup() {
     const url = ref('https://api.apiopen.top/getJoke?page=1&count=2&type=video');
     const result = ref('');
+    const options = ref(['GET', 'POST', 'PUT', 'PATCH', 'DELETE']);
+    const option = ref('GET');
 
     const sendRequest = () => {
       if (!url.value) {
@@ -70,6 +71,8 @@ export default {
       url,
       result,
       sendRequest,
+      options,
+      option,
     };
   },
 };
