@@ -1,4 +1,7 @@
 module.exports = {
+  globals: {
+    Prism: true,
+  },
   parser: 'vue-eslint-parser',
   parserOptions: {
     parser: '@typescript-eslint/parser', // Specifies the ESLint parser

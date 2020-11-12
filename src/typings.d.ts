@@ -12,7 +12,6 @@ declare module '*.tiff';
 declare module 'omit.js';
 declare module '*.mp3';
 declare module '*.json';
-declare module 'prismjs';
 
 declare module '*.vue' {
   import { ComponentOptions } from 'vue';

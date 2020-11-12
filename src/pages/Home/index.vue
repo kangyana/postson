@@ -52,7 +52,17 @@ export default {
       fetch(url.value)
         .then((res) => res.json())
         .then((res) => {
-          result.value = JSON.stringify(res);
+          const str = JSON.stringify(res);
+          result.value = str
+            .replace(/            {/g, '{')
+            .replace(/,/g, ',\n')
+            .replace(/{/g, '{\n')
+            .replace(/}/g, '\n}')
+            .replace(/\[/g, '[\n')
+            .replace(/\]/g, '\n]');
+          setTimeout(() => {
+            Prism.highlightAll();
+          });
         });
     };
 
