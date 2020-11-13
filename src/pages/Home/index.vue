@@ -9,8 +9,8 @@
     <div class="request flex-1 flex flex-col">
       <div class="request-form flex">
         <div class="request-search flex-1 flex">
-          <select class="request-select fw700" v-model="option">
-            <option v-for="item in options" :key="item" :value="item">{{ item }}</option>
+          <select class="request-select fw700" v-model="method">
+            <option v-for="item in methods" :key="item" :value="item">{{ item }}</option>
           </select>
           <input class="request-input flex-1" v-model="url" />
         </div>
@@ -34,7 +34,8 @@
 </template>
 
 <script lang="ts">
-import { ref } from 'vue';
+import { ref, watch } from 'vue';
+import request, { Method } from '@/utils/request';
 import './base.less';
 
 export default {
@@ -42,37 +43,35 @@ export default {
   setup() {
     const url = ref('https://api.apiopen.top/getJoke?page=1&count=2&type=video');
     const result = ref('');
-    const options = ref(['GET', 'POST', 'PUT', 'PATCH', 'DELETE']);
-    const option = ref('GET');
-
-    const sendRequest = () => {
+    const methods = ref<Method[]>(['GET', 'POST', 'PUT', 'PATCH', 'DELETE']);
+    const method = ref<Method>('GET');
+    // 发送请求
+    const sendRequest = async () => {
       if (!url.value) {
         alert('请求URL为空！');
         return;
       }
-      fetch(url.value)
-        .then((res) => res.json())
-        .then((res) => {
-          const str = JSON.stringify(res);
-          result.value = str
-            .replace(/            {/g, '{')
-            .replace(/,/g, ',\n')
-            .replace(/{/g, '{\n')
-            .replace(/}/g, '\n}')
-            .replace(/\[/g, '[\n')
-            .replace(/\]/g, '\n]');
-          setTimeout(() => {
-            Prism.highlightAll();
-          });
-        });
+      const res = await request({ method: method.value, url: url.value });
+      result.value = JSON.stringify(res)
+        .replace(/,/g, ',\n')
+        .replace(/{/g, '{\n')
+        .replace(/}/g, '\n}')
+        .replace(/\[/g, '[\n')
+        .replace(/\]/g, '\n]');
     };
+    // 刷新高亮
+    watch(result, (newValue, oldValue) => {
+      setTimeout(() => {
+        Prism.highlightAll();
+      });
+    });
 
     return {
       url,
       result,
       sendRequest,
-      options,
-      option,
+      methods,
+      method,
     };
   },
 };
