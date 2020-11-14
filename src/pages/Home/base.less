@@ -2,10 +2,20 @@
   .history {
     overflow-y: scroll;
     width: 300px;
+    .tool-bar {
+      background: #f6f6f6;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      .title {
+        color: rgba(0, 0, 0, 0.85);
+      }
+    }
     .history-item {
       padding: 12px;
       .request-type {
         margin-right: 10px;
+      }
+      &:hover {
+        background: #f6f6f6;
       }
     }
   }
@@ -51,9 +61,11 @@
       }
     }
     .request-result {
+      position: relative;
       margin-top: 20px;
       .result-title {
         margin-bottom: 20px;
+        color: rgba(0, 0, 0, 0.85);
       }
       .result-panel {
         overflow: hidden;
@@ -64,9 +76,8 @@
           width: 100%;
           height: calc(100% - 20px);
           margin: 0;
-          white-space: pre-line;
           code {
-            word-break: break-all;
+            display: block;
           }
         }
       }

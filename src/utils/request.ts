@@ -24,4 +24,4 @@ const request = (props: RequestProps) => {
   }).then((response) => response.json()); // parses response to JSON
 };
 
-export default request
+export default request;
