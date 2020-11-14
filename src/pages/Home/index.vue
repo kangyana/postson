@@ -37,7 +37,7 @@
         <div class="result-panel flex-1 flex">
           <pre class="line-numbers">
             <code class="language-json">{{ result }}</code>
-            <empty v-if="!result">
+            <empty v-if="!result && !loading">
               <span style="color: #fff;">Click Send to get a response</span>
             </empty>
           </pre>

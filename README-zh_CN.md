@@ -8,29 +8,29 @@
 
 <div align="center">
 
-A free webapp as postman.
+一个免费的，像 postman 一样的网页应用。
 
 </div>
 
 [![](https://raw.githubusercontent.com/kangyana/img-storage/master/preview.jpg)](https://github.com/kangyana/postson)
 
-English | [简体中文](./README-zh_CN.md)
+[English](./README.md) | 简体中文
 
-## ✨ Features
+## ✨ 特性
 
-- 📦 A set of high-quality request test webapp out of the box.
+- 📦 开箱即用的高质量 测试请求的 网页应用。
 
 ## 🖥 Environment Support
 
-- Modern browsers and Internet Explorer 11 (with [polyfills](https://stackoverflow.com/questions/57020976/polyfills-in-2019-for-ie11))
+- 现代浏览器和 IE11 (需要 [polyfills](https://stackoverflow.com/questions/57020976/polyfills-in-2019-for-ie11))
 
 | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br>IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br>Safari | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/electron/electron_48x48.png" alt="Electron" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br>Electron |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | IE11, Edge                                                                                                                                                                                                     | last 2 versions                                                                                                                                                                                                  | last 2 versions                                                                                                                                                                                              | last 2 versions                                                                                                                                                                                              | last 2 versions                                                                                                                                                                                                      |
 
-## ⌨️ Development
+## ⌨️ 本地开发
 
-clone locally:
+克隆到本地开发:
 
 ```bash
 $ git clone https://github.com/kangyana/postson
@@ -39,4 +39,4 @@ $ yarn install
 $ yarn start
 ```
 
-Open your browser and visit http://127.0.0.1:3000
+打开浏览器访问 http://127.0.0.1:3000
