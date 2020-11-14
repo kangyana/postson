@@ -33,7 +33,7 @@ English | [简体中文](./README-zh_CN.md)
 clone locally:
 
 ```bash
-$ git clone https://github.com/kangyana/postson
+$ git clone https://github.com/kangyana/postson.git
 $ cd postson
 $ yarn install
 $ yarn start
