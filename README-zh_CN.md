@@ -33,7 +33,7 @@
 克隆到本地开发:
 
 ```bash
-$ git clone https://github.com/kangyana/postson
+$ git clone https://github.com/kangyana/postson.git
 $ cd postson
 $ yarn install
 $ yarn start
