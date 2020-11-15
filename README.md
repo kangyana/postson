@@ -1,14 +1,14 @@
 <p align="center">
   <a href="https://github.com/kangyana/postson">
-    <img width="200" src="https://static.getpostman.com/assets/pm-logo-1.svg">
+    <img width="200" src="https://raw.githubusercontent.com/kangyana/img-storage/master/postman_logo.png">
   </a>
 </p>
 
-<h1 align="center">postson</h1>
+<h1 align="center">Postson</h1>
 
 <div align="center">
 
-A free webapp as postman.
+A free webapp like Postman's.
 
 </div>
 
@@ -40,3 +40,13 @@ $ yarn start
 ```
 
 Open your browser and visit http://127.0.0.1:3000
+
+## 🤝 Contributing [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+
+Read [contributing guide](./CONTRIBUTING.md) and let's build a better postson together.
+
+We welcome all contributions. Please read our [CONTRIBUTING.md](./CONTRIBUTING.md) first. You can submit any ideas as [pull requests](https://github.com/kangyana/postson/pulls) or as [GitHub issues](https://github.com/kangyana/postson/issues). If you'd like to improve code, check out the [Development Instructions](https://github.com/kangyana/postson/wiki/Development) and have a good time! :)
+
+## LICENSE
+
+This project is based on the [MIT](https://en.wikipedia.org/wiki/MIT_License) protocol, please feel free to enjoy and participate in open source.

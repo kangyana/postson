@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/kangyana/postson">
-    <img width="200" src="https://static.getpostman.com/assets/pm-logo-1.svg">
+    <img width="200" src="https://raw.githubusercontent.com/kangyana/img-storage/master/postman_logo.png">
   </a>
 </p>
 
@@ -8,7 +8,7 @@
 
 <div align="center">
 
-一个免费的，像 postman 一样的网页应用。
+轻量、可靠的，像 Postman 一样的网页应用。
 
 </div>
 
@@ -20,7 +20,7 @@
 
 - 📦 开箱即用的高质量 测试请求的 网页应用。
 
-## 🖥 Environment Support
+## 🖥 兼容环境
 
 - 现代浏览器和 IE11 (需要 [polyfills](https://stackoverflow.com/questions/57020976/polyfills-in-2019-for-ie11))
 
@@ -40,3 +40,13 @@ $ yarn start
 ```
 
 打开浏览器访问 http://127.0.0.1:3000
+
+## 🤝 参与共建 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+
+请参考[贡献指南](./CONTRIBUTING.md).
+
+> 强烈推荐阅读 [《提问的智慧》](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way)、[《如何向开源社区提问题》](https://github.com/seajs/seajs/issues/545) 和 [《如何有效地报告 Bug》](http://www.chiark.greenend.org.uk/%7Esgtatham/bugs-cn.html)、[《如何向开源项目提交无法解答的问题》](https://zhuanlan.zhihu.com/p/25795393)，更好的问题更容易获得帮助。
+
+## 开源协议
+
+本项目基于 [MIT](https://zh.wikipedia.org/wiki/MIT%E8%A8%B1%E5%8F%AF%E8%AD%89) 协议，请自由地享受和参与开源。
